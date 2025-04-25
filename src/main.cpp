@@ -59,10 +59,7 @@ int main(void) {
 
       case 0x0B: // fila 1
       cuenta=3; //3
-      break;
-
-      case 0x07: // fila 1
-      cuenta=10; //
+      
       break; 
   }
 
@@ -83,12 +80,7 @@ int main(void) {
 
       case 0x0B: // fila 1
       cuenta=6; //3
-
       break;
-      case 0x07: // boton de suma
-      cuenta=11; //
-      break; 
-  
     }
 
       //FILA3
@@ -108,11 +100,7 @@ int main(void) {
 
       case 0x0B: // fila 1
       cuenta=9; //3
-      break;
-      case 0x07: // boton resta
-      cuenta=12; //
-      break; 
-  
+      break;  
   }
   //FILA 4
     PORTB |= 0x0F;    // Todas las columnas en high
@@ -121,23 +109,10 @@ int main(void) {
     filas = PINC & 0x0F; // Leemos solo las filas (PD0–PD3)
 
     switch (filas){
-
-      case 0x0E: // boton multiplicacion
-      cuenta=13;
-      break;
       
-      case 0x0D: // boton 0
+      case 0x0D: // fila 1
       cuenta=0; //2
       break;
-
-      case 0x0B: // botonenter
-      cuenta=14; // enter
-      break; 
-
-      case 0x07: // boton negativo
-      cuenta=15;
-      break;
-  
   }
   if (cuenta !=  antiguo) {
     antiguo = cuenta;
@@ -147,7 +122,7 @@ int main(void) {
     _delay_ms(250);
   }
 
-
   
+
 }
 }
