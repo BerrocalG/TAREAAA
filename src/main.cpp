@@ -121,8 +121,5 @@ int main(void) {
     unidad = cuenta;
     _delay_ms(250);
   }
-
-  
-
 }
 }
